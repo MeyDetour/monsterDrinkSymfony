@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MonsterController!{% endblock %}
+
+{% block body %}
+
+    <div class="gap-5 d-flex flex-row flex-wrap cardContainer">
+        {% for monster in monsters %}
+            <div class="card cardBelle" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ monster.nom }}</h5>
+                    <p class="card-text">{{ monster.price }}</p>
+                    <a href="{{ path('show_monster',{'id':monster.id}) }}" class="btn btn-primary">show</a>
+                    <a href="{{ path('edit_monster',{'id':monster.id} )}}" class="btn btn-primary">editer</a>
+                    <a href="{{ path('delete_monster',{'id':monster.id} )}}" class="btn btn-primary">delete</a>
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

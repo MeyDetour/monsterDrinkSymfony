@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MonsterController!{% endblock %}
+
+{% block body %}
+
+    <div class="gap-5 d-flex flex-row flex-wrap">
+        {% for user in users %}
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ user.username }}</h5>
+                    <p class="card-text">{{ user.password }}</p>
+                    <p class="card-text">{{ user.email }}</p>
+
+                    <a href="{{ path('delete_user',{'id':user.id}) }}" class="btn btn-primary">delete</a>
+
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

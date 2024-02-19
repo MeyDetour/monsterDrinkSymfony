@@ -1,3 +1,39 @@
 body {
-    background-color: skyblue;
+   background-image: url("../image/fond.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+:root{
+    --joyeux : #D6B800;
+    --grincheux : #575664;
+    --dormeur : #5a3574;
+    --simplet : #295DA7;
+    --prof : #1f2255;
+    --atchoum : #FAFAFA;
+    --timide : #10052D;
+    --dash : #45a588;
+}
+
+.navbar {
+    background-color: var(--dash);
+    border-radius: 0px 0px 10px 10px;
+    height: 8vh;
+    border-bottom: 3px solid var(--joyeux);
+}
+a{text-decoration: none}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+.cardContainer{
+    overflow-y: scroll;
+    height: 80vh;
+    width: 80vw;
 }
